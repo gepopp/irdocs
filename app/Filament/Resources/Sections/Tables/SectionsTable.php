@@ -14,11 +14,6 @@ class SectionsTable
     {
         return $table
             ->columns([
-                TextColumn::make('slug')
-                    ->searchable(),
-                TextColumn::make('order')
-                    ->numeric()
-                    ->sortable(),
                 TextColumn::make('name')
                     ->searchable(),
                 TextColumn::make('deleted_at')
@@ -44,6 +39,6 @@ class SectionsTable
                 BulkActionGroup::make([
                     DeleteBulkAction::make(),
                 ]),
-            ]);
+            ])->reorderable('order');
     }
 }

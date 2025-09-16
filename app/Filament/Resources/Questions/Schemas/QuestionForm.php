@@ -3,6 +3,7 @@
 namespace App\Filament\Resources\Questions\Schemas;
 
 use Filament\Forms\Components\RichEditor;
+use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Textarea;
 use Filament\Schemas\Schema;
@@ -13,6 +14,17 @@ class QuestionForm
     {
         return $schema
             ->components([
+                Select::make('section_id')
+                    ->relationship('section', 'name')
+                    ->searchable()
+                    ->createOptionForm([
+                        TextInput::make('name')
+                    ])
+                    ->editOptionForm([
+                        TextInput::make('name')
+                    ])
+                    ->label('Betrifft')
+                    ->required(),
                 TextInput::make('question')
                     ->required()
                     ->columnSpanFull(),

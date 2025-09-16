@@ -12,12 +12,6 @@ class SectionForm
     {
         return $schema
             ->components([
-                TextInput::make('slug')
-                    ->required(),
-                TextInput::make('order')
-                    ->required()
-                    ->numeric()
-                    ->default(0),
                 TextInput::make('name')
                     ->required(),
                 Textarea::make('description')
