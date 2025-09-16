@@ -16,7 +16,6 @@ class QuestionForm
             ->components([
                 Select::make('section_id')
                     ->relationship('section', 'name')
-                    ->searchable()
                     ->createOptionForm([
                         TextInput::make('name')
                     ])
