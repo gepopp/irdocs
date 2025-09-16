@@ -13,7 +13,7 @@ class QuestionForm
     {
         return $schema
             ->components([
-                Textarea::make('question')
+                TextInput::make('question')
                     ->required()
                     ->columnSpanFull(),
                 RichEditor::make('answer')
