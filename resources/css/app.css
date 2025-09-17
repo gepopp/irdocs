@@ -23,6 +23,55 @@
     --color-zinc-900: #171717;
     --color-zinc-950: #0a0a0a;
 
+
+    --color-zinc-50: #f1f4fa;
+    --color-zinc-100: #dfe9f6;
+    --color-zinc-200: #b9d0ea;
+    --color-zinc-300: #7da9d7;
+    --color-zinc-400: #3c7cbb;
+    --color-zinc-500: #2d5985;
+    --color-zinc-600: #214670;
+    --color-zinc-700: #1e3d62;
+    --color-zinc-800: #1a314b;
+    --color-zinc-900: #182a40;
+    --color-zinc-950: #101b2a;
+
+    --color-company-50: #f1f8f4;
+    --color-company-100: #ddeee1;
+    --color-company-200: #bdddc7;
+    --color-company-300: #91c4a5;
+    --color-company-400: #62a57f;
+    --color-company-500: #3e825d;
+    --color-company-600: #2f6c4c;
+    --color-company-700: #26563f;
+    --color-company-800: #204533;
+    --color-company-900: #1b392b;
+    --color-company-950: #0e2018;
+
+    --color-event-50: #fbf3f9;
+    --color-event-100: #f9e5f7;
+    --color-event-200: #f0caea;
+    --color-event-300: #e49ed5;
+    --color-event-400: #d264bb;
+    --color-event-500: #852d72;
+    --color-event-600: #642c57;
+    --color-event-700: #522346;
+    --color-event-800: #481f3d;
+    --color-event-900: #381a2f;
+    --color-event-950: #250b1e;
+
+    --color-duir-50: #f1f4fa;
+    --color-duir-100: #dfe9f6;
+    --color-duir-200: #b9d0ea;
+    --color-duir-300: #7da9d7;
+    --color-duir-400: #3c7cbb;
+    --color-duir-500: #2d5985;
+    --color-duir-600: #214670;
+    --color-duir-700: #1e3d62;
+    --color-duir-800: #1a314b;
+    --color-duir-900: #182a40;
+    --color-duir-950: #101b2a;
+
     --color-accent: var(--color-neutral-800);
     --color-accent-content: var(--color-neutral-800);
     --color-accent-foreground: var(--color-white);
@@ -64,3 +113,51 @@ select:focus[data-flux-control] {
 /* \[:where(&)\]:size-4 {
     @apply size-4;
 } */
+/* Grundlegende Artikel-Struktur */
+/* Grundlegende Artikel-Struktur */
+article {
+    @apply max-w-7xl mx-auto px-5 py-6 text-gray-800 leading-relaxed;
+}
+
+/* Überschriften */
+article h1 {
+    @apply text-2xl sm:text-3xl md:text-4xl text-duir-800 font-bold mb-6 pb-3 border-b-2 border-duir-800;
+}
+
+article h2 {
+    @apply text-xl sm:text-2xl md:text-3xl text-duir-700 font-semibold mt-8 mb-4;
+}
+
+/* Paragraphen */
+article p {
+    @apply mb-5 text-justify text-sm md:text-base;
+}
+
+/* Blockquotes für Expertenzitate */
+article blockquote {
+    @apply pl-5 border-l-4 border-duir-800 italic text-gray-600 my-6 py-1;
+}
+
+/* Footer/Abschluss */
+article .footer-text {
+    @apply mt-10 pt-5 border-t border-gray-300 italic text-gray-600 text-sm;
+}
+
+/* Responsive Anpassungen */
+@screen sm {
+    article {
+        @apply px-6;
+    }
+}
+
+@screen md {
+    article {
+        @apply px-8;
+    }
+}
+
+@screen lg {
+    article {
+        @apply px-10;
+    }
+}
